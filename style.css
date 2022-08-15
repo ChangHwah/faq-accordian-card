@@ -1,0 +1,131 @@
+/* #### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%) */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+p {
+    font-size: 12px;
+}
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    /* margin-top: 30px; */
+}
+.dropdown-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.test {
+    
+}
+.content-wrapper {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 65rem;
+    height: 35rem;
+    text-align: left;
+}
+/* .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    
+} */
+.image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 142.5% 71%;
+}
+.woman-desktop-image{
+    background-image: url('images/illustration-woman-online-desktop.svg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: -98% 50%;
+}
+.box-svg {
+    position: absolute;
+    top: 42%;
+    left: -19%;
+    
+}
+.dropdown-button, .dropdown-content {
+    max-width: 70%;
+    text-align: left;
+}
+.dropdown-button {
+    width: 70%;
+    text-align: left;
+}
+.dropdown-button:hover {
+    color: hsl(14, 88%, 65%);
+    font-weight: bold;
+}
+.dropdown-button::after {
+    content: url('/images/icon-arrow-down.svg');
+    float: right;
+    transition: .3s;
+}
+.active {
+    font-weight: bold;
+}
+.active::after {
+    transition: .3s linear;
+    transform: rotate(180deg);
+}
+.dropdown-content {
+    color: hsl(240, 6%, 50%);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.open {
+    transition: .3s;
+    padding-bottom: 15px;
+}
